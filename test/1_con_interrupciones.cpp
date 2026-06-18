@@ -1,3 +1,11 @@
+/*En una fábrica se diseña en una línea de montaje un sistema de seguimiento el cual cuenta con 4 sensores
+ ubicados en las distintas partes por las que el producto pasa y hace su proceso de producción. Tener en cuenta
+ que cuando arribe recién va a estar en la parte 1. Cada sensor (cuando sense) enviará un 1 por su salida y un 0
+ cuando no se sense. Se requiere hacer una solución programable para realizar el seguimiento del producto y
+ mostrar por cual etapa va mediante un 7 segmentos. Cuando el producto terminé (10 segundos luego de que pase
+ por la cuarta estación) deberá mostrarse una C de completado y titilando cada medio segundo. Cuando el personal
+ detecte que el producto terminó el proceso, presionará un botón para sacar el estado de terminado y dejando un
+ guión medio hasta que se sense que un producto empezó de nuevo la cadena de producción.*/
 #include <Arduino.h>
 
 int sensores[4] = {1, 2, 3, 4};
