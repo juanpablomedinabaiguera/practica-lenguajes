@@ -28,27 +28,22 @@ volatile int cuarto_activo = 0;
 
 
 void IRAM_ATTR sensor1() {
-    cuarto_activo=1;
-    
+    cuarto_activo=1; 
 }
 
 void IRAM_ATTR sensor2() {
     cuarto_activo=2;
-    
 }
 
 void IRAM_ATTR sensor3() {
-    cuarto_activo=3;
-    
+    cuarto_activo=3;   
 }
 
 void IRAM_ATTR sensor4() {
-    cuarto_activo=4;
-    
+    cuarto_activo=4;  
 }
 void IRAM_ATTR pulsador() {
     cuarto_activo=0;
-    
     }
 
 void setup (){
@@ -76,11 +71,11 @@ void loop (){
                     guion != guion;
                     if(guion){
                         for(int i=0;i<7;i++){
-                            digitalWrite(pines_segmentos[i],d7s[0][i]);
+                            digitalWrite(pines_segmento[i],d7s[0][i]);
                         }
                     }else{
                         for(int i=0;i<7;i++){
-                            digitalWrite(pines_segmentos[i],LOW);
+                            digitalWrite(pines_segmento[i],LOW);
                         }
                     }
                 }

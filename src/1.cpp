@@ -20,12 +20,12 @@ int d7s[6][7]={
                 {0,0,0,0,0,0,1}         //-
             };
 
-volatile int sensor_activo = 0;
+volatile int sensor_activo=0;
 
 bool c = true;
-bool guion=true;
 
 unsigned long t_actual=0;
+
 unsigned long t_previo1=0;
 unsigned long t_delay1=10000;
 
@@ -57,6 +57,11 @@ void setup(){
         pinMode(sens[i],INPUT);
     }
 
+    attachInterrupt(digitalPinToInterrupt(sens[1]), sensor1, RISING);
+    attachInterrupt(digitalPinToInterrupt(sens[2]), sensor2, RISING);
+    attachInterrupt(digitalPinToInterrupt(sens[3]), sensor3, RISING);
+    attachInterrupt(digitalPinToInterrupt(sens[4]), sensor4, RISING);
+
     for(int i=0;i<7;i++){
         pinMode(pin_seg[7],OUTPUT);
     }
@@ -68,7 +73,7 @@ void loop(){
     switch(sensor_activo){
         case 0:
                 for(int i=0;i<7;i++){
-                    digitalWrite(pin_seg[i],d7s[0][i]);
+                    digitalWrite(pin_seg[i],d7s[5][i]);     //enciendo guion
                 }
                 break;
 
